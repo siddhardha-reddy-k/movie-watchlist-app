@@ -1,4 +1,4 @@
-# 🎬 CineList - Movie Watchlist App
+# 🎬 Movie Watchlist App
 
 A full stack movie watchlist application built with the PERN stack.
 

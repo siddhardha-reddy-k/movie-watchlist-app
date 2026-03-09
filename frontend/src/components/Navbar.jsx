@@ -14,7 +14,7 @@ function Navbar() {
     <nav className="bg-gray-900 text-white px-8 py-4 flex justify-between items-center">
       {/* Logo */}
       <a href="/search" className="text-xl font-bold text-yellow-400">
-        🎬 CineList
+        🎬 Movies Watchlist App
       </a>
 
       {/* Links */}
