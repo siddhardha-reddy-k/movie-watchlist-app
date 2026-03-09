@@ -1,5 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
+import API_URL from "../config.js";
 
 function Search() {
   const [query, setQuery] = useState("");
@@ -14,9 +15,7 @@ function Search() {
 
     setLoading(true); // start loading
     try {
-      const response = await fetch(
-        `http://localhost:3000/movies?query=${query}`,
-      );
+      const response = await fetch(`${API_URL}/movies?query=${query}`);
       const data = await response.json();
 
       if (Array.isArray(data)) {
@@ -51,7 +50,7 @@ function Search() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/watchlist", {
+      const response = await fetch(`${API_URL}/watchlist`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

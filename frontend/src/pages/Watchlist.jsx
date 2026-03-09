@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
+import API_URL from "../config.js";
 
 function Watchlist() {
   const [watchlist, setWatchlist] = useState([]);
@@ -9,7 +10,7 @@ function Watchlist() {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch("http://localhost:3000/watchlist", {
+      const response = await fetch(`${API_URL}/watchlist`, {
         headers: {
           authorization: token,
         },
@@ -28,7 +29,7 @@ function Watchlist() {
     const token = localStorage.getItem("token");
 
     try {
-      await fetch(`http://localhost:3000/watchlist/${id}`, {
+      await fetch(`${API_URL}/watchlist/${id}`, {
         method: "DELETE",
         headers: {
           authorization: token,
