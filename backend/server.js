@@ -9,8 +9,12 @@ dotenv.config();
 
 // Routes
 
-const app = express();
-const port = process.env.PORT;
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://movies.siddhardhareddy.com"],
+    credentials: true,
+  }),
+);
 
 app.use(
   cors({
